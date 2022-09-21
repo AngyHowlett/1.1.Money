@@ -1,5 +1,10 @@
 fun main() {
-    val amount = 1000_000
-    val tax = if (amount * 0.0075 >= 3500) amount * 0.0075 else 3500
-    println(tax)
+    val sum = 450
+    val sumOfCommission = 0.75
+    val minCommission = 35
+
+    val commission = sum * sumOfCommission / 100
+    val amount = if (commission < minCommission) sum - minCommission else sum - commission
+    println ("Вы хотите перевести: $sum руб. После комиссии сумма составит: $amount руб.")
+
 }
